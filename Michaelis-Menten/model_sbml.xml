@@ -23,46 +23,16 @@
       <parameter id="log_k1" value="-4.6052"/>
       <parameter id="log_k2" value="0"/>
       <parameter id="log_k3" value="0"/>
-      <!-- Dependent variables -->
-      <parameter id="_rateLaw1" constant="true"/>
-      <parameter id="_rateLaw2" constant="true"/>
-      <parameter id="_rateLaw3" constant="true"/>
       <!-- Observables -->
       <parameter id="S" constant="false"/>
       <parameter id="E" constant="false"/>
       <parameter id="ES" constant="false"/>
       <parameter id="P" constant="false"/>
+      <!-- Global functions -->
+      <parameter id="k1" constant="false"/>
+      <parameter id="k2" constant="false"/>
+      <parameter id="k3" constant="false"/>
     </listOfParameters>
-    <listOfInitialAssignments>
-      <!-- Dependent variables -->
-      <initialAssignment symbol="_rateLaw1">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <power/>
-            <cn> 10 </cn>
-            <ci> log_k1 </ci>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw2">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <power/>
-            <cn> 10 </cn>
-            <ci> log_k2 </ci>
-          </apply>
-        </math>
-      </initialAssignment>
-      <initialAssignment symbol="_rateLaw3">
-        <math xmlns="http://www.w3.org/1998/Math/MathML">
-          <apply>
-            <power/>
-            <cn> 10 </cn>
-            <ci> log_k3 </ci>
-          </apply>
-        </math>
-      </initialAssignment>
-    </listOfInitialAssignments>
     <listOfRules>
       <!-- Observables -->
       <assignmentRule variable="S">
@@ -101,6 +71,34 @@
             </apply>
           </math>
       </assignmentRule>
+      <!-- Global functions -->
+      <assignmentRule variable="k1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <power/>
+            <cn> 10 </cn>
+            <ci> log_k1 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="k2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <power/>
+            <cn> 10 </cn>
+            <ci> log_k2 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule variable="k3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <power/>
+            <cn> 10 </cn>
+            <ci> log_k3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
     </listOfRules>
     <listOfReactions>
       <reaction id="R1" reversible="false">
@@ -115,7 +113,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw1 </ci>
+              <ci> k1 </ci>
               <ci> S1 </ci>
               <ci> S2 </ci>
             </apply>
@@ -134,7 +132,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw2 </ci>
+              <ci> k2 </ci>
               <ci> S3 </ci>
             </apply>
           </math>
@@ -152,7 +150,7 @@
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
               <times/>
-              <ci> _rateLaw3 </ci>
+              <ci> k3 </ci>
               <ci> S3 </ci>
             </apply>
           </math>
