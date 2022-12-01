@@ -2,9 +2,9 @@
 begin model
 
 begin parameters
-    log_k1 -4.6052
-    log_k2 0
-    log_k3 0
+    log_k1 -3
+    log_k2 -2.5
+    log_k3 -1
 end parameters
 
 begin molecule types
