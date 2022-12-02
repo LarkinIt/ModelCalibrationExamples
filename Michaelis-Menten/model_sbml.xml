@@ -13,16 +13,16 @@
       <compartment id="cell" size="1"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species id="S1" compartment="cell" initialAmount="100" name="S()"/>
-      <species id="S2" compartment="cell" initialAmount="10" name="E()"/>
+      <species id="S1" compartment="cell" initialAmount="600" name="S()"/>
+      <species id="S2" compartment="cell" initialAmount="60" name="E()"/>
       <species id="S3" compartment="cell" initialAmount="0" name="ES()"/>
       <species id="S4" compartment="cell" initialAmount="0" name="P()"/>
     </listOfSpecies>
     <listOfParameters>
       <!-- Independent variables -->
-      <parameter id="log_k1" value="-3"/>
-      <parameter id="log_k2" value="-2.5"/>
-      <parameter id="log_k3" value="-1"/>
+      <parameter id="log_k1" value="-2.77"/>
+      <parameter id="log_k2" value="-1"/>
+      <parameter id="log_k3" value="-2"/>
       <!-- Observables -->
       <parameter id="S" constant="false"/>
       <parameter id="E" constant="false"/>

@@ -2,9 +2,9 @@
 begin model
 
 begin parameters
-    log_k1 -3
-    log_k2 -2.5
-    log_k3 -1
+    log_k1 -2.77
+    log_k2 -1
+    log_k3 -2
 end parameters
 
 begin molecule types
@@ -15,8 +15,8 @@ begin molecule types
 end molecule types
 
 begin species
-    S() 100
-    E() 10
+    S() 600
+    E() 60
 end species
 
 begin observables
@@ -43,5 +43,5 @@ end model
 generate_network({overwrite=>1})
 writeSBML()
 
-simulate({method=>"ode",suffix=>"ode", t_end=>1010, n_steps=>10100})
+simulate({method=>"ode",suffix=>"ode", t_end=>20000, n_steps=>10100})
 
