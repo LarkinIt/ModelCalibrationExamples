@@ -16,7 +16,7 @@ end molecule types
 
 begin species
     S() 600
-    E() 60
+    E() 6
 end species
 
 begin observables

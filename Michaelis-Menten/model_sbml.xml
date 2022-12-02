@@ -14,7 +14,7 @@
     </listOfCompartments>
     <listOfSpecies>
       <species id="S1" compartment="cell" initialAmount="600" name="S()"/>
-      <species id="S2" compartment="cell" initialAmount="60" name="E()"/>
+      <species id="S2" compartment="cell" initialAmount="6" name="E()"/>
       <species id="S3" compartment="cell" initialAmount="0" name="ES()"/>
       <species id="S4" compartment="cell" initialAmount="0" name="P()"/>
     </listOfSpecies>
